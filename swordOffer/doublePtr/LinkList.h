@@ -9,13 +9,13 @@ public:
 };
 
 class LinkList {
-public:    
+public:
     ListNode *head;
     LinkList() : head(new ListNode(-1)) {};     // [-1] [2]
-    void Insert(int i, int val);
-    void Delete(int i);
-    void Dispaly(ListNode *head);
-    int GetLength(ListNode *head);
+    void insertNode(int i, int val);
+    void deleteNode(int i);
+    void dispaly(ListNode *head);
+    int getLength(ListNode *head);
 };
 
 class Node {
@@ -27,7 +27,7 @@ public:
 };
 
 class RandomList {
-public: 
+public:
     Node *head;
     RandomList() : head(new Node(-1)) {};
     void Insert(int i, int val);

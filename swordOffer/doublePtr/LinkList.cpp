@@ -3,7 +3,7 @@
 using namespace std;
 
 /* 在第 i 个位置插入值为 val 的节点 */
-void LinkList::Insert(int i, int val) {
+void LinkList::insertNode(int i, int val) {
     ListNode *node = new ListNode(val);
     ListNode *tmp = head;
     int idx = 0;
@@ -16,7 +16,7 @@ void LinkList::Insert(int i, int val) {
 }
 
 /* 删除位置 i 处的节点 */
-void LinkList::Delete(int i) {
+void LinkList::deleteNode(int i) {
     ListNode *tmp = head;
     int j = 0;
     while (j < i) {
@@ -26,9 +26,9 @@ void LinkList::Delete(int i) {
     }
     tmp->next = tmp->next->next;
 }
-    
+
 /* 显示链表中的值 */
-void LinkList::Dispaly(ListNode *head) {
+void LinkList::dispaly(ListNode *head) {
     ListNode *tmp = head;
     int idx = 0;
     while (tmp != nullptr) {
@@ -39,13 +39,14 @@ void LinkList::Dispaly(ListNode *head) {
 //  T
 //  1, 2, 3, 4
 /* 获取链表当前的长度 */
-int LinkList::GetLength(ListNode *head) { 
+int LinkList::getLength(ListNode *head) {
     ListNode *tmp = head;
     int count = 0;
     while (tmp != nullptr) {
         tmp = tmp->next;
         count++;
     }
+    cout << "len is :" << count << endl;
     return count;
 }
 
@@ -62,8 +63,6 @@ void RandomList::Insert(int i, int val) {
     tmp->next = node;
 }
 
-//      p1 p2            
-// head n1 n2 n3 n4
 void RandomList::RandomInsert(int i, int j) {
     Node *p1 = head, *p2 = head;
     while (i-- >= 0) p1 = p1->next;
