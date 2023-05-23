@@ -16,6 +16,7 @@ public:
     void deleteNode(int i);
     void dispaly(ListNode *head);
     int getLength(ListNode *head);
+    ListNode *getNode(int i);
 };
 
 class Node {

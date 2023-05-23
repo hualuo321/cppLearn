@@ -35,6 +35,7 @@ void LinkList::dispaly(ListNode *head) {
         cout << "idx:" << idx++ << " val:" << tmp->val << endl;
         tmp = tmp->next;
     }
+    cout << endl;
 }
 //  T
 //  1, 2, 3, 4
@@ -48,6 +49,13 @@ int LinkList::getLength(ListNode *head) {
     }
     cout << "len is :" << count << endl;
     return count;
+}
+//      t
+// h 1, 2, 3
+ListNode *LinkList::getNode(int i) {
+    ListNode *tmp = head->next;
+    while (i--) tmp = tmp->next;
+    return tmp;
 }
 
 /* 在第 i 个位置插入值为 val 的节点 */
